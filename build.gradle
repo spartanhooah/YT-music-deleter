@@ -1,0 +1,22 @@
+plugins {
+    id 'groovy'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.10'
+    implementation 'org.gebish:geb-core:5.1'
+    implementation 'org.gebish:geb-spock:5.1'
+    implementation 'org.seleniumhq.selenium:selenium-firefox-driver:4.1.3'
+}
+
+test {
+    systemProperty 'webdriver.gecko.driver', 'C:\\Users\\spart\\IdeaProjects\\YT-music-deleter\\src\\main\\resources\\GebConfig.groovy'
+    useJUnitPlatform()
+}
